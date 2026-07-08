@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray_bg">
+
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_border" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <!-- Tab 0: Nhân Viên -->
+        <LinearLayout
+            android:id="@+id/tab_nhan_vien"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:id="@+id/icon_nhan_vien"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_manage"
+                app:tint="@color/teal_primary" />
+            <TextView
+                android:id="@+id/text_nhan_vien"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_nhan_vien"
+                android:textSize="10sp"
+                android:textColor="@color/teal_primary"/>
+        </LinearLayout>
+
+        <!-- Tab 1: Vị Trí -->
+        <LinearLayout
+            android:id="@+id/tab_vi_tri"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:id="@+id/icon_vi_tri"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_agenda"
+                app:tint="@color/gray_text" />
+            <TextView
+                android:id="@+id/text_vi_tri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_vi_tri"
+                android:textSize="10sp"
+                android:textColor="@color/gray_text"/>
+        </LinearLayout>
+
+        <!-- Tab 2: Chấm Công (MỚI) -->
+        <LinearLayout
+            android:id="@+id/tab_cham_cong"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:id="@+id/icon_cham_cong"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_recent_history"
+                app:tint="@color/gray_text" />
+            <TextView
+                android:id="@+id/text_cham_cong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_cham_cong"
+                android:textSize="10sp"
+                android:textColor="@color/gray_text"/>
+        </LinearLayout>
+
+        <!-- Tab 3: Lương (MỚI) -->
+        <LinearLayout
+            android:id="@+id/tab_luong"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:id="@+id/icon_luong"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_today"
+                app:tint="@color/gray_text" />
+            <TextView
+                android:id="@+id/text_luong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_luong"
+                android:textSize="10sp"
+                android:textColor="@color/gray_text"/>
+        </LinearLayout>
+
+        <!-- Tab 4: Báo Cáo -->
+        <LinearLayout
+            android:id="@+id/tab_bao_cao"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:id="@+id/icon_bao_cao"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_sort_by_size"
+                app:tint="@color/gray_text" />
+            <TextView
+                android:id="@+id/text_bao_cao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_bao_cao"
+                android:textSize="10sp"
+                android:textColor="@color/gray_text"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

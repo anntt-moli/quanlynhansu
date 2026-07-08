@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray_bg">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/teal_primary"
+        android:padding="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Báo Cáo"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tv_ngay_bao_cao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:layout_marginTop="2dp"/>
+    </LinearLayout>
+
+    <!-- 3 Tab buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/tab_tong_quan"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="📊 Tổng quan"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true"/>
+        <TextView
+            android:id="@+id/tab_nv_theo_vitri"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="📋 Theo vị trí"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true"/>
+        <TextView
+            android:id="@+id/tab_luong_cao"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="💰 Lương > 10tr"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="3dp"
+        android:background="@color/teal_primary"/>
+
+    <!-- ═══ TAB 0: TỔNG QUAN ═══ -->
+    <ScrollView
+        android:id="@+id/content_tong_quan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!-- 4 thẻ thống kê + icon -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="6dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:background="@drawable/bg_card_border"
+                    android:padding="12dp" android:layout_marginEnd="4dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:id="@+id/tv_tong_nv" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="0" android:textSize="24sp"
+                            android:textStyle="bold" android:textColor="@color/teal_primary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Tổng nhân viên" android:textSize="11sp" android:textColor="@color/gray_text"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="👥" android:textSize="20sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:background="@drawable/bg_card_border"
+                    android:padding="12dp" android:layout_marginStart="4dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:id="@+id/tv_tong_vt" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="0" android:textSize="24sp"
+                            android:textStyle="bold" android:textColor="@color/teal_primary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Tổng vị trí" android:textSize="11sp" android:textColor="@color/gray_text"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="🏢" android:textSize="20sp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="12dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:background="@drawable/bg_card_border"
+                    android:padding="12dp" android:layout_marginEnd="4dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:id="@+id/tv_chua_gan" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="0" android:textSize="24sp"
+                            android:textStyle="bold" android:textColor="@color/status_sap_het"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Chưa gán vị trí" android:textSize="11sp" android:textColor="@color/gray_text"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="👤" android:textSize="20sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:background="@drawable/bg_card_border"
+                    android:padding="12dp" android:layout_marginStart="4dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:id="@+id/tv_vt_trong" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="0" android:textSize="24sp"
+                            android:textStyle="bold" android:textColor="@color/status_het_han"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Vị trí trống" android:textSize="11sp" android:textColor="@color/gray_text"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="🚫" android:textSize="20sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Chấm công hôm nay -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:background="@drawable/bg_card_border"
+                android:padding="14dp" android:layout_marginBottom="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="⏱  Chấm công hôm nay" android:textSize="13sp"
+                    android:textStyle="bold" android:textColor="@color/text_primary"
+                    android:layout_marginBottom="10dp"/>
+                <!-- Biểu đồ cột: Có mặt / Vắng / Nghỉ phép -->
+                <LinearLayout android:id="@+id/container_bieu_do_hom_nay"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="bottom"
+                    android:layout_marginBottom="8dp"/>
+                <!-- Danh sách vắng/nghỉ phép -->
+                <LinearLayout android:id="@+id/container_vang_phep"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:layout_marginBottom="10dp"/>
+                <!-- Biểu đồ tuần -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Tuần này" android:textSize="12sp" android:textStyle="bold"
+                    android:textColor="@color/text_primary" android:layout_marginBottom="6dp"/>
+                <LinearLayout android:id="@+id/container_bieu_do_tuan"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="bottom"/>
+            </LinearLayout>
+
+            <!-- Phân bố theo vị trí -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:background="@drawable/bg_card_border"
+                android:padding="14dp" android:layout_marginBottom="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="📊  Phân bố theo vị trí" android:textSize="13sp"
+                    android:textStyle="bold" android:textColor="@color/text_primary"
+                    android:layout_marginBottom="4dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Chạm vào một vị trí để xem danh sách nhân viên"
+                    android:textSize="11sp" android:textColor="@color/gray_text"
+                    android:layout_marginBottom="8dp"/>
+                <LinearLayout android:id="@+id/container_phan_bo"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical"/>
+            </LinearLayout>
+
+            <!-- Thống kê độ tuổi -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:background="@drawable/bg_card_border"
+                android:padding="14dp" android:layout_marginBottom="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="📈  Thống kê độ tuổi" android:textSize="13sp"
+                    android:textStyle="bold" android:textColor="@color/text_primary"
+                    android:layout_marginBottom="8dp"/>
+                <LinearLayout android:id="@+id/container_tuoi"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical"/>
+            </LinearLayout>
+
+            <!-- Sinh nhật trong tháng (chọn tháng) -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:background="@drawable/bg_card_border"
+                android:padding="14dp" android:layout_marginBottom="20dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+                    <TextView android:id="@+id/tv_title_sinh_nhat"
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:textSize="13sp" android:textStyle="bold"
+                        android:textColor="@color/text_primary"/>
+                    <TextView android:id="@+id/btn_sn_thang_truoc"
+                        android:layout_width="32dp" android:layout_height="32dp"
+                        android:gravity="center" android:text="◄" android:textSize="14sp"
+                        android:textColor="@color/teal_primary"
+                        android:clickable="true" android:focusable="true"/>
+                    <TextView android:id="@+id/btn_sn_thang_sau"
+                        android:layout_width="32dp" android:layout_height="32dp"
+                        android:gravity="center" android:text="►" android:textSize="14sp"
+                        android:textColor="@color/teal_primary"
+                        android:clickable="true" android:focusable="true"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/container_sinh_nhat"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ═══ TAB 1: THEO VỊ TRÍ (giữ nguyên) ═══ -->
+    <LinearLayout
+        android:id="@+id/content_nv_theo_vitri"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:visibility="gone">
+        <FrameLayout
+            android:id="@+id/frame_spinner_vi_tri"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+            <Spinner
+                android:id="@+id/spinner_vi_tri"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_spinner"
+                android:paddingStart="12dp"
+                android:paddingEnd="36dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="12dp"
+                android:text="▼"
+                android:textSize="30sp"
+                android:textColor="@color/teal_primary"
+                android:clickable="false"
+                android:focusable="false"/>
+        </FrameLayout>
+        <TextView
+            android:id="@+id/tv_so_nv_theo_vitri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/teal_primary"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:id="@+id/tv_khong_co_nv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chưa có nhân viên nào ở vị trí này"
+            android:textColor="@color/gray_text"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:padding="24dp"
+            android:visibility="gone"/>
+        <ListView
+            android:id="@+id/lv_nv_theo_vitri"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/gray_border"
+            android:dividerHeight="1dp"/>
+    </LinearLayout>
+
+    <!-- ═══ TAB 2: LƯƠNG > 10TR (giữ nguyên) ═══ -->
+    <LinearLayout
+        android:id="@+id/content_luong_cao"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:visibility="gone">
+
+        <!-- Chọn tháng -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/bg_card_border"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:id="@+id/btn_lc_thang_truoc"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:gravity="center"
+                android:text="◄"
+                android:textSize="16sp"
+                android:textColor="@color/teal_primary"
+                android:clickable="true"
+                android:focusable="true"/>
+            <TextView
+                android:id="@+id/tv_lc_thang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:paddingHorizontal="16dp"/>
+            <TextView
+                android:id="@+id/btn_lc_thang_sau"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:gravity="center"
+                android:text="►"
+                android:textSize="16sp"
+                android:textColor="@color/teal_primary"
+                android:clickable="true"
+                android:focusable="true"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_tieu_de_luong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/teal_primary"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            android:id="@+id/tv_khong_co_luong_cao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_text"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:padding="24dp"
+            android:visibility="gone"/>
+        <ListView
+            android:id="@+id/lv_luong_cao"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/gray_border"
+            android:dividerHeight="1dp"/>
+    </LinearLayout>
+</LinearLayout>

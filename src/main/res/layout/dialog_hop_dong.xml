@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loại hợp đồng"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp">
+        <TextView
+            android:id="@+id/btn_type_thu_viec"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Thử việc"
+            android:textSize="12sp"
+            android:layout_marginEnd="6dp"
+            android:clickable="true"
+            android:focusable="true"/>
+        <TextView
+            android:id="@+id/btn_type_chinh_thuc"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Chính thức"
+            android:textSize="12sp"
+            android:layout_marginEnd="6dp"
+            android:clickable="true"
+            android:focusable="true"/>
+        <TextView
+            android:id="@+id/btn_type_thoi_vu"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Thời vụ"
+            android:textSize="12sp"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+
+    <!-- Ngày bắt đầu — 3 ô -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ngày bắt đầu"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="12dp">
+        <EditText
+            android:id="@+id/edt_ngay_bd"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:hint="Ngày"
+            android:textSize="14sp"
+            android:inputType="number"
+            android:gravity="center"
+            android:maxLength="2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" / "
+            android:textSize="16sp"
+            android:textColor="@color/gray_text"/>
+        <EditText
+            android:id="@+id/edt_thang_bd"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:hint="Tháng"
+            android:textSize="14sp"
+            android:inputType="number"
+            android:gravity="center"
+            android:maxLength="2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" / "
+            android:textSize="16sp"
+            android:textColor="@color/gray_text"/>
+        <EditText
+            android:id="@+id/edt_nam_bd"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1.5"
+            android:hint="Năm"
+            android:textSize="14sp"
+            android:inputType="number"
+            android:gravity="center"
+            android:maxLength="4"/>
+    </LinearLayout>
+
+    <!-- Ngày kết thúc — 3 ô -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ngày kết thúc (trống = không xác định)"
+        android:textSize="13sp"
+        android:textColor="@color/gray_text"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="12dp">
+        <EditText
+            android:id="@+id/edt_ngay_kt"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:hint="Ngày"
+            android:textSize="14sp"
+            android:inputType="number"
+            android:gravity="center"
+            android:maxLength="2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" / "
+            android:textSize="16sp"
+            android:textColor="@color/gray_text"/>
+        <EditText
+            android:id="@+id/edt_thang_kt"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:hint="Tháng"
+            android:textSize="14sp"
+            android:inputType="number"
+            android:gravity="center"
+            android:maxLength="2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" / "
+            android:textSize="16sp"
+            android:textColor="@color/gray_text"/>
+        <EditText
+            android:id="@+id/edt_nam_kt"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1.5"
+            android:hint="Năm"
+            android:textSize="14sp"
+            android:inputType="number"
+            android:gravity="center"
+            android:maxLength="4"/>
+    </LinearLayout>
+
+    <!-- Ghi chú -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ghi chú"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"/>
+    <EditText
+        android:id="@+id/edt_ghi_chu_hd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:hint="Nhập ghi chú..."
+        android:textSize="14sp"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:layout_marginTop="4dp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="8dp"/>
+</LinearLayout>
